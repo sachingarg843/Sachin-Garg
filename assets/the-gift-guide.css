@@ -1,0 +1,276 @@
+ .the-gift-guide-top-container .the-gift-guide-bottom-container{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .the-gift-guide-top-container .the-gift-guide-left-text-container{
+    width: 40%;
+    padding-right: 0;
+    margin-top: 48px;
+  }
+
+  .the-gift-guide-top-container .the-gift-guide-main-heading-text{
+    margin: 0;
+    color: #000000;
+    font-family: 'Jost';
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 70px;
+    font-size: clamp(50px, 4.86vw, 70px);
+    line-height: 100%;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    margin-bottom: 50px;
+  }
+
+  .the-gift-guide-top-container .the-gift-guide-sub-heading-text{
+    margin: 0;
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    color: #000000;
+  }
+
+  .the-gift-guide-top-container .the-gift-guide-button-container{
+        margin-top: 50px;
+  }
+
+  .the-gift-guide-top-container .the-gift-guide-button{
+    padding: 15px;
+    width: 220px;
+    display: block;
+    text-align: center;
+    max-width: 250px;
+    color: #FFFFFF;
+    font-family: 'Jost';
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 20.48px;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    background: #000000;
+    text-decoration: none;
+     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .the-gift-guide-top-container .the-gift-guide-button:hover {
+    background-color: white;
+    color: #000;
+    border: 1px solid black;
+}
+
+.the-gift-guide-top-container .the-gift-guide-button {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.the-gift-guide-top-container .the-gift-guide-button:hover {
+    background-color: white;
+    color: #000;
+    border: 1px solid black;
+}
+
+  .the-gift-guide-top-container .the-gift-guide-right-container{
+    width: 70%;
+    line-height: 0;
+  }
+
+  .the-gift-guide-top-container .The-gift-guide-upper{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+      .the-gift-guide-top-container .The-gift-guide-main-container.mobile{
+      display:  none;
+    }
+
+.the-gift-guide-top-container .the-gift-guide-bottom-line-text.desktop {
+    text-align: center;
+    background: #F5F5F5;
+    padding: 10px 0;
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 13.42px;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.the-gift-guide-top-container .the-gift-guide-bottom-line-text.mobile {
+    display: none;
+}
+
+
+  @media screen and (max-width: 1270px) {
+    .the-gift-guide-top-container .the-gift-guide-main-heading-text{
+      font-size: clamp(30px, 3.94vw, 50px);
+      margin-bottom: 30px;
+    }
+
+    .the-gift-guide-top-container .the-gift-guide-button-container {
+        margin-top: 30px;
+    }
+
+    .the-gift-guide-top-container .the-gift-guide-left-text-container {
+        margin-top: 28px;
+    }
+   }
+
+  @media screen and (max-width: 1070px) {
+      .the-gift-guide-top-container .the-gift-guide-main-heading-text{
+          font-size: 30px;
+          margin-bottom: 15px;
+      }
+
+      .the-gift-guide-top-container .the-gift-guide-button-container {
+          margin-top: 15px;
+      }
+
+      .the-gift-guide-top-container .the-gift-guide-left-text-container {
+          margin-top: 20px;
+      }
+
+      .the-gift-guide-top-container .the-gift-guide-sub-heading-text{
+        font-size: 18px;
+      }
+
+      .the-gift-guide-top-container .the-gift-guide-button {
+        padding: 12px;
+        width: 180px;
+        display: block;
+        text-align: center;
+        max-width: 250px;
+        color: #FFFFFF;
+        font-family: 'Jost';
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 14px;
+        leading-trim: NONE;
+        line-height: 16.48px;
+        letter-spacing: 0px;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase;
+        background: #000000;
+        text-decoration: none;
+      }
+  }
+
+
+  @media screen and (max-width: 850px) {
+
+  .the-gift-guide-top-container .the-gift-guide-sub-heading-text {
+      font-size: 12px;
+  }
+
+  .the-gift-guide-top-container .the-gift-guide-main-heading-text {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.the-gift-guide-top-container .the-gift-guide-button {
+    padding: 12px;
+    width: 150px;
+    display: block;
+    text-align: center;
+    max-width: 250px;
+    color: #FFFFFF;
+    font-family: 'Jost';
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
+    leading-trim: NONE;
+    line-height: 14.48px;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    background: #000000;
+    text-decoration: none;
+    
+}
+
+}
+
+
+ @media screen and (max-width: 768px) {
+    .the-gift-guide-top-container .The-gift-guide-main-container.desktop{
+      display:  none;
+    }
+    
+    .the-gift-guide-top-container .The-gift-guide-main-container.mobile{
+      display:  block;
+      text-align: center;
+    }
+
+    .the-gift-guide-top-container .the-gift-guide-bottom-line-text.desktop {
+        display: none;
+    }
+
+    .the-gift-guide-top-container .the-gift-guide-bottom-line-text.mobile {
+        display: block;
+        color: #000000;
+        font-family: 'Jost';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 13.42px;
+        letter-spacing: 0px;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase;
+        background: #F5F5F5;
+        padding: 10px 0;
+    }
+
+    .the-gift-guide-top-container .the-gift-guide-main-heading-text{
+      color: #000000;
+      font-family: 'Jost';
+      font-weight: 500;
+      font-style: Medium;
+      font-size: 30px;
+      leading-trim: NONE;
+      line-height: 100%;
+      letter-spacing: 0px;
+      text-align: center;
+      margin-bottom: 24px;
+      vertical-align: middle;
+    }
+
+    .the-gift-guide-top-container .the-gift-guide-subheading-mobile{
+      font-family: 'Jost';
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 16px;
+      leading-trim: NONE;
+      line-height: 130%;
+      letter-spacing: 0px;
+      text-align: center;
+      color: #000000;
+      margin-bottom: 12px;
+    }
+
+    .the-gift-guide-top-container .the-gift-guide-mobile-image{
+      position: relative;
+    }
+
+    .the-gift-guide-top-container .the-gift-guide-mobile-button-container{
+      position: absolute;
+      left: 50%;
+      bottom: 40px;
+      transform: translate(-50%, -50%);
+    }
+    
+  }
