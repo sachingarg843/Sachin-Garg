@@ -1,0 +1,77 @@
+.header .header__icons{
+    display: none;
+}
+
+.header-wrapper .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.header a.custom-header-btn.header-desktop {
+    display: flex;
+    gap: 18px;
+    background: #FFF544;
+    padding: 12px 25px;
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+ .header .custom-header-btn{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background: #FFF544;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    gap: 18px;
+      color: #000;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Jost';
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 20.48px;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    width: 200px;
+    justify-content: center;
+  }
+
+  .custom-header-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* spacing between text and icon */
+  padding: 10px 20px;
+  background-color: transparent;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-header-btn svg {
+  transition: fill 0.3s ease, color 0.3s ease;
+}
+
+.custom-header-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.custom-header-btn:hover svg path {
+  fill: white;
+}

@@ -1,0 +1,241 @@
+{{ 'the-gift-guide.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .the-gift-guide--{{ section.id }} {
+      margin-top: {{ section.settings.margin_top_desktop }}px;
+      margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
+      padding-top: {{ section.settings.padding_top_desktop }}px;
+      padding-bottom: {{ section.settings.padding_bottom_desktop }}px;
+  }
+
+  @media screen and (max-width: 768px) {
+      .the-gift-guide--{{ section.id }} {
+        margin-top: {{ section.settings.margin_top_mobile }}px;
+        margin-bottom: {{ section.settings.margin_bottom_mobile }}px;
+        padding-top: {{ section.settings.padding_top_mobile }}px;
+        padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
+      }
+  }
+</style>
+
+{% if section.settings.desktop_main_image_upper != blank
+  and section.settings.heading != blank
+  and section.settings.subheading != blank
+  and section.settings.desktop_main_image_Bottom_right != blank
+%}
+  <section class="the-gift-guide--{{ section.id }} the-gift-guide-top-container">
+    <div class="The-gift-guide-main-container desktop">
+      {% if section.settings.desktop_main_image_upper != blank %}
+        <div class="the-gift-guide-upper-image">
+          {{
+            section.settings.desktop_main_image_upper
+            | image_url: width: 1600
+            | image_tag: class: 'The-gift-guide-upper', loading: 'eager'
+          }}
+        </div>
+      {% endif %}
+      <div class="the-gift-guide-bottom-container">
+        <div class="the-gift-guide-left-text-container page-width">
+          {% if section.settings.heading != blank %}
+            <div class="the-gift-guide-main-heading">
+              <h2 class="the-gift-guide-main-heading-text">{{ section.settings.heading }}</h2>
+            </div>
+          {% endif %}
+          {% if section.settings.subheading != blank %}
+            <div class="the-gift-guide-sub-heading-text">
+              {{ section.settings.subheading }}
+            </div>
+          {% endif %}
+          {% if section.settings.button_link != blank and section.settings.button_text != blank %}
+            <div class="the-gift-guide-button-container">
+              <a href="{{ section.settings.button_link }}" class="the-gift-guide-button">
+                {{ section.settings.button_text }}
+              </a>
+            </div>
+          {% endif %}
+        </div>
+        {% if section.settings.desktop_main_image_Bottom_right != blank %}
+          <div class="the-gift-guide-right-container">
+            {{
+              section.settings.desktop_main_image_Bottom_right
+              | image_url: width: 1600
+              | image_tag: class: 'The-gift-guide-upper', loading: 'eager'
+            }}
+          </div>
+        {% endif %}
+      </div>
+      {% if section.settings.bottom_text != blank %}
+        <div class="the-gift-guide-bottom-line-text desktop">
+          {{ section.settings.bottom_text }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="The-gift-guide-main-container mobile">
+      {% if section.settings.heading != blank %}
+        <div class="The-gift-guide-mobile-heading">
+          <h2 class="the-gift-guide-main-heading-text">{{ section.settings.heading }}</h2>
+        </div>
+      {% endif %}
+      {% if section.settings.subheading_mobile != blank %}
+        <div class="the-gift-guide-subheading-mobile">
+          {{ section.settings.subheading_mobile }}
+        </div>
+      {% endif %}
+
+      {% if section.settings.mobile_main_image != blank %}
+        <div class="the-gift-guide-mobile-image-container">
+          <div class="the-gift-guide-mobile-image">
+            {{
+              section.settings.mobile_main_image
+              | image_url: width: 1100
+              | image_tag: class: 'The-gift-guide-upper', loading: 'eager'
+            }}
+
+            {% if section.settings.button_link and section.settings.button_text != blank %}
+              <div class="the-gift-guide-mobile-button-container">
+                <a href="{{ section.settings.button_link }}" class="the-gift-guide-button">
+                  {{ section.settings.button_text }}
+                </a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+      {% if section.settings.bottom_text_mobile != blank %}
+        <div class="the-gift-guide-bottom-line-text mobile">
+          {{ section.settings.bottom_text_mobile }}
+        </div>
+      {% endif %}
+    </div>
+  </section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "The Gift Guide",
+  "settings": [
+    {
+      "type": "range",
+      "id": "margin_top_desktop",
+      "label": "Section Margin Top (Desktop)",
+      "min": 0,
+      "max": 50,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_desktop",
+      "label": "Section Margin Bottom (Desktop)",
+      "min": 0,
+      "max": 50,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "label": "Section Padding Top (Desktop)",
+      "min": 0,
+      "max": 50,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "label": "Section Padding Bottom (Desktop)",
+      "min": 0,
+      "max": 50,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_top_mobile",
+      "label": "Section Margin Top (Mobile)",
+      "min": 0,
+      "max": 50,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_mobile",
+      "label": "Section Margin Bottom (Mobile)",
+      "min": 0,
+      "max": 50,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Section Padding Top (Mobile)",
+      "min": 0,
+      "max": 50,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Section Padding Bottom (Mobile)",
+      "min": 0,
+      "max": 50,
+      "default": 0
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_main_image_upper",
+      "label": "Desktop Upper Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_main_image_Bottom_right",
+      "label": "Desktop Bottom Right Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_main_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The Gift Guide"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Sub Heading Desktop",
+      "default": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season."
+    },
+    {
+      "type": "text",
+      "id": "subheading_mobile",
+      "label": "Sub Heading Mobile",
+      "default": "Discover Joy: Your Ultimate Holiday Gift Destination."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "bottom_text",
+      "label": "Bottom Text",
+      "default": "Sustainable Ethecally Made Sizes from XXS to 6XL"
+    },
+    {
+      "type": "text",
+      "id": "bottom_text_mobile",
+      "label": "Bottom Text Mobile",
+      "default": "SUSTAINABLE, ETHICALLY MADE ACTIVEWEAR"
+    }
+  ],
+  "presets": [{ "name": "The Gift Guide" }]
+}
+{% endschema %}

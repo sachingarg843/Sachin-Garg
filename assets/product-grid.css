@@ -1,0 +1,454 @@
+     .custom-grid-section .grid-section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .custom-grid-section .grid-item {
+      position: relative;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .custom-grid-section  .main-image {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .custom-grid-section  .plus-icon {
+      position: absolute;
+      transform: translate(50%, -50%);
+      cursor: pointer;
+    }
+
+    .custom-grid-section  .plus-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .custom-grid-section  .product-popup-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .custom-grid-section  .product-popup {
+      background: #fff;
+      width: 80%;
+      max-width: 450px;
+      box-shadow: 0px 2px 4px 0px #00000033;
+      padding: 16px;
+      position: relative;
+      border-radius: 4px;
+    }
+
+
+    .custom-grid-section  .popup-inner h3 {
+        color: #000000;
+        font-family: 'Jost';
+        font-weight: 300;
+        font-style: Light;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 120%;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        margin: 0px;
+        margin-bottom:20px;
+        margin-top: 13px;
+    }
+
+    .custom-grid-section .popup-inner .popup-price {
+        margin: 0px;
+        color: #000000;
+        font-family: Lustria;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 120%;
+        letter-spacing: 0px;
+        vertical-align: middle;
+        margin-bottom: 12px;
+    }
+
+    .custom-grid-section .popup-inner .popup-desc {
+        margin: 0px;
+        color: #000000;
+        font-family: 'Jost';
+        font-weight: 300;
+        font-style: Light;
+        font-size: 14px;
+        leading-trim: NONE;
+        line-height: 110.00000000000001%;
+        letter-spacing: -1%;
+    }
+
+  .custom-grid-section .popup-options {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+    .custom-grid-section .popup-options label {
+      display: block;
+      margin: 0px;
+      color: #333333;
+      font-family: 'Jost';
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    leading-trim: NONE;
+    line-height: 130%;
+    letter-spacing: 0%;
+    margin-bottom: 7px;
+    }
+
+    .custom-grid-section .option-buttons {
+      display: flex;
+      gap: 0px;
+    }
+
+    .custom-grid-section .option-buttons button {
+      flex: 1;
+      border: 1px solid #000;
+      padding: 0;
+      background: #fff;
+      cursor: pointer;
+      color: #000000;
+    }
+
+    .custom-grid-section .option-select {
+      width: 100%;
+      padding: 6px;
+    }
+
+    .custom-grid-section .add-to-cart-btn {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      background: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-family: 'Jost';
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 16px;
+      leading-trim: NONE;
+      line-height: 20.48px;
+      letter-spacing: 0px;
+      text-align: center;
+      vertical-align: middle;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      display: flex;
+    justify-content: center;
+    gap: 28px;
+
+    }
+
+    .custom-grid-section .add-to-cart-btn svg, .custom-grid-section .add-to-cart-btn svg path{
+    fill: #fff;
+    stroke: #fff;
+    transition: fill 0.3s ease, color 0.3s ease;
+    }
+
+    .custom-grid-section .product-popup {
+      background: #fff;
+      width: 90%;
+      max-width: 350px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      border-radius: 0;
+      box-shadow: 0px 2px 4px 0px #00000033;
+      padding: 36px 20px 25px 20px;
+    }
+
+    .custom-grid-section .popup-inner {
+      display: flex;
+      gap: 20px;
+    }
+
+    .custom-grid-section .popup-left {
+      flex: 1;
+    }
+
+    .custom-grid-section .popup-image {
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+        height: 100%;
+    }
+
+    .custom-grid-section .popup-right {
+      flex: 1.5;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .custom-grid-section .close-btn {
+      position: absolute;
+      top: 12px;
+      right: 15px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0px;
+    }
+
+
+
+    .custom-grid-section .popup-options label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+
+    .custom-grid-section .option-btn {
+      flex: 1;
+      border: 1px solid #000;
+      padding: 8px;
+      background: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color .7s ease, color .7s ease, background-position .7s ease;
+    }
+
+    .custom-grid-section .option-btn.active {
+      background: #000;
+      color: #fff;
+    }
+
+    .custom-grid-section .custom-select select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #000;
+      font-size: 14px;
+    }
+
+    .custom-grid-section .add-to-cart-btn {
+      margin-top: auto;
+      width: 100%;
+      padding: 12px;
+      background: #000;
+      color: #fff;
+      border: none;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      text-transform: uppercase;
+      border-radius: 3px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+      .custom-grid-section .add-to-cart-btn:hover {
+            background: #FFF544;
+            color: #000;
+      }
+
+      .custom-grid-section .add-to-cart-btn:hover svg, .custom-grid-section .add-to-cart-btn:hover svg path{
+        fill: #000;
+        stroke: #000;
+      }
+
+    .custom-grid-section .product-image-and-information-container {
+        display: flex;
+        gap: 8px;
+    }
+
+    .custom-grid-section .product-left-side-image-container {
+        max-width: 120px;
+    }
+
+    .custom-grid-section .popup-options-values{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 10px;
+        margin-bottom: 38px;
+        gap: 11px;
+    }
+
+    .custom-grid-section .custom-select {
+      position: relative;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .custom-grid-section .select-trigger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        transition: 0.3s;
+        padding-left: 12px;
+        border: 0.5px solid #000000;
+    }
+
+    .custom-grid-section .size-svg{
+        border-left: .5px solid #000000;
+        padding: 6px 18px;
+        height: 40px;
+        max-height: 40px;
+    }
+
+    .custom-grid-section .arrow {
+      font-size: 12px;
+      transition: transform 0.3s;
+    }
+
+    .custom-grid-section .select-options {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      max-height: 0;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      border-top: none;
+      background: #fff;
+      transition: max-height 0.3s ease;
+      z-index: 10;
+    }
+
+    .custom-grid-section .custom-select.open .select-options {
+      max-height: 300px;
+    }
+
+    .custom-grid-section .custom-select.open .arrow svg {
+      transform: rotate(180deg);
+
+    }
+
+      .custom-grid-section .custom-select .arrow svg {
+          transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+      }
+
+
+
+    .custom-grid-section .select-option {
+      padding: 10px;
+      transition: background .3s, color .3s;
+      text-align: center;
+      font-family: 'Jost';
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 16px;
+      leading-trim: NONE;
+      line-height: 100%;
+      letter-spacing: -2%;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .custom-grid-section .select-option:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    .custom-grid-section .color-strip {
+      width: 6px;
+      height: 40px;
+      margin-right: 8px;
+      display: inline-block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-right: .5px solid #000000;
+      max-height: 40px;
+  }
+  .custom-grid-section .option-btn {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    padding: 6px 12px;
+    background: #fff;
+    cursor: pointer;
+  }
+
+
+  .custom-grid-section .select-trigger .label-name{
+      font-family: 'Jost';
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 16px;
+      leading-trim: NONE;
+      line-height: 100%;
+      letter-spacing: -2%;
+      vertical-align: middle;
+      color: #000;
+  }
+
+  .custom-grid-section .size-label-name{
+      width: 100%;
+      text-align: center;
+      line-height: 0px;
+  }
+
+  .custom-grid-section .option-buttons button.btn-without-strip{
+    height: 40px;
+    max-height: 40px;
+    padding-left: 10px;
+  }
+
+  .custom-grid-section .custom-grid-heading {
+    font-family: Lustria;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    vertical-align: middle;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+
+  
+  @media (max-width: 767px) {
+      .custom-grid-section .grid-section {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+      }
+
+      .custom-grid-section .plus-icon svg {
+        width: 15px;
+        height: 15px;
+      }
+
+       .custom-grid-section .popup-inner {
+        flex-direction: column;
+      }
+
+       .custom-grid-section .custom-grid-heading {
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: Lustria;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: 0px;
+        color: #000000;
+
+       }
+
+       .custom-grid-section .popup-options {
+        width: 98%;
+        margin: auto;
+       }
+       .custom-grid-section .product-left-side-image-container{
+        width: 70%;
+       }
+
+       .custom-grid-section .product-right-side-information{
+         width: 75%;
+       }
+
+    }

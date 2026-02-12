@@ -5,6 +5,27 @@
   {% render 'header-drawer' %}
 {% endcomment %}
 
+<style>
+
+  .menu-drawer-container .menu-drawer-open{
+    display: block;
+  }
+
+    .menu-drawer-container .menu-drawer-close{
+      display: none;
+    }
+
+  .menu-drawer-container.menu-opening .menu-drawer-open{
+    display: none;
+  }
+
+    .menu-drawer-container.menu-opening .menu-drawer-close{
+      display: block;
+    }
+
+
+</style>
+
 <header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
   <details id="Details-menu-drawer-container" class="menu-drawer-container">
     <summary
@@ -12,8 +33,17 @@
       aria-label="{{ 'sections.header.menu' | t }}"
     >
       <span>
-        {{- 'icon-hamburger.svg' | inline_asset_content -}}
-        {{- 'icon-close.svg' | inline_asset_content -}}
+        {% comment %} {{- 'icon-hamburger.svg' | inline_asset_content -}} {% endcomment %}
+        <svg class = "menu-drawer-open" xmlns="http://www.w3.org/2000/svg" width="20" height="13" viewBox="0 0 20 13" fill="none">
+        <path d="M1 6.5H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1 1.5H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1 11.5H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        {% comment %} {{- 'icon-close.svg' | inline_asset_content -}} {% endcomment %}
+         <svg class = "menu-drawer-close" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+        <path d="M1 13.9997L13.7279 1.27177" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1 1.00031L13.7279 13.7282" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </span>
     </summary>
     <div id="menu-drawer" class="gradient menu-drawer motion-reduce color-{{ section.settings.menu_color_scheme }}">
@@ -133,6 +163,7 @@
                   {%- endif -%}
                 </li>
               {%- endfor -%}
+              <a class = "custom-header-btn" href = "">Choose Gift <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="icon icon-arrow" viewBox="0 0 14 10"><path fill="currentColor" fill-rule="evenodd" d="M8.537.808a.5.5 0 0 1 .817-.162l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 1 1-.708-.708L11.793 5.5H1a.5.5 0 0 1 0-1h10.793L8.646 1.354a.5.5 0 0 1-.109-.546" clip-rule="evenodd"></path></svg> </a>
             </ul>
           </nav>
           <div class="menu-drawer__utility-links">
