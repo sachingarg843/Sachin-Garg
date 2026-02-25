@@ -340,10 +340,9 @@
 
         errorMsg.style.display = 'none';
 
-        // Get the variant ID of the addon product (from data attribute)
+       
         const addonProductId = addToCartBtn.dataset.addonProduct;
 
-        // If the user is eligible for the free product, add both the main product and the addon product
         const isEligibleForFreeProduct = checkFreeProductEligibility();
 
         const productsToAdd = [
@@ -354,7 +353,7 @@
         ];
 
         if (isEligibleForFreeProduct && addonProductId) {
-          // If eligible for free product, add the addon product as well
+          
           productsToAdd.push({
             id: addonProductId,
             quantity: 1,
