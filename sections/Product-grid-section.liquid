@@ -28,7 +28,7 @@
   <div class="grid-section">
     {% for block in section.blocks %}
       {% if block.settings.grid_image != blank and block.settings.product != blank %}
-        <div class="grid-item" {{ block.shopify_attributes }}>
+        <div class="grid-item">
           {% if block.settings.grid_image %}
             {{ block.settings.grid_image | image_url: width: 800 | image_tag: class: 'main-image', loading: 'lazy' }}
           {% endif %}
@@ -199,7 +199,7 @@
       parentSelect.classList.remove('open');
     });
 
-    // Hide any error messages
+   
     const errorMsg = popup.querySelector('.popup-error-message');
     if (errorMsg) {
       errorMsg.style.display = 'none';
