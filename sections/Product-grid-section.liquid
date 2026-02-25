@@ -33,7 +33,7 @@
             {{ block.settings.grid_image | image_url: width: 800 | image_tag: class: 'main-image', loading: 'lazy' }}
           {% endif %}
 
-          <!-- Plus Icon -->
+         
           <div
             class="plus-icon"
             style="top: {{ block.settings.top_position }}%; right: {{ block.settings.right_poisition }}%;"
@@ -46,7 +46,7 @@
             </svg>
           </div>
         </div>
-        <!-- Hidden Popup for this product -->
+      
         <div class="product-popup-overlay" id="popup-{{ block.id }}">
           <div class="product-popup">
             <button class="close-btn" onclick="closePopup('{{ block.id }}')">
@@ -187,7 +187,7 @@
     const popup = document.getElementById('popup-' + id);
     popup.style.display = 'none';
     document.body.style.overflow = 'unset';
-    // Reset selected options in the popup
+    
     const colorButtons = popup.querySelectorAll('.option-btn');
     colorButtons.forEach((btn) => btn.classList.remove('active'));
 
