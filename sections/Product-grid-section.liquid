@@ -284,7 +284,7 @@
         return false;
       }
 
-      // Handle color selection
+     
       popup.querySelectorAll('.option-btn').forEach((btn) => {
         btn.addEventListener('click', () => {
           popup.querySelectorAll('.option-btn').forEach((button) => {
@@ -306,7 +306,7 @@
         });
       });
 
-      // Handle size selection
+    
       popup.querySelectorAll('.select-option').forEach((option) => {
         option.addEventListener('click', () => {
           selectedOptions.Size = option.dataset.value;
@@ -324,7 +324,7 @@
         });
       });
 
-      // Add to cart
+    
       addToCartBtn.addEventListener('click', (e) => {
         if (!selectedOptions.Color || !selectedOptions.Size) {
           errorMsg.style.display = 'block';
